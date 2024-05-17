@@ -28,17 +28,14 @@ The APIs provides the functionalities of the ledger such as assets movement and 
 	}
   ```
 
-- **GET /wallets/balance**
+- **GET /wallets/balance?walletId={wallet Id}&balanceAsOf={balance as of time stamp}**
 
 	For querying the historical balance by a given timestamp
 
-	Sample request body:
-  ```json
-	{
-		"walletId": 1,
-		"balanceAsOfTimestamp": "2024-05-17T13:59:39.972Z"
-	}
-  ```
+	Sample request body: </br>
+`
+  	/wallets/balance?walletId=4&balanceAsOf=2024-05-17T13:59:39.972Z
+`
 
 	Sample response body:
   ```json
@@ -87,11 +84,11 @@ The APIs provides the functionalities of the ledger such as assets movement and 
 	Sample response body
   ```json
 	{
-    		"accountId": "e630fdd3-2e5e-40df-ae04-fe11d398628a",
-        "ledgerId": "1",
-    		"status": "CLOSED",
-    		"createdTime": 1715864729230,
-    		"updatedTime": 1715864740825
+		"accountId": "e630fdd3-2e5e-40df-ae04-fe11d398628a",
+		"ledgerId": "1",
+		"status": "CLOSED",
+		"createdTime": 1715864729230,
+		"updatedTime": 1715864740825
 	}
   ```
 
